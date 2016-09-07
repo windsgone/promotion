@@ -1,0 +1,183 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>好邻居大测试</title>
+		<meta name="keywords" content="好邻居" />
+		<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+		<script src="jquery.min.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<link rel="stylesheet" href="test.css" />
+
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>ÎÞ±êÌâÎÄµµ</title>
+<style>
+#mcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+#mcover img {
+    position: fixed;
+    right: 18px;
+    top: 5px;
+    width: 260px!important;
+    height: 180px!important;
+    z-index: 20001;
+}
+.text {
+    margin: 15px 0;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #727272;
+}
+#mess_share {
+    margin: 15px 0;
+    display: block;
+}
+#share_1 {
+    float: left;
+    width: 49%;
+    display: block;
+}
+#share_2 {
+    float: right;
+    width: 49%;
+    display: block;
+}
+.clr {
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.button2 {
+    font-size: 16px;
+    padding: 8px 0;
+    border: 1px solid #adadab;
+    color: #000000;
+    background-color: #e8e8e8;
+    background-image: linear-gradient(to top, #dbdbdb, #f4f4f4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45), inset 0 1px 1px #efefef;
+    text-shadow: 0.5px 0.5px 1px #fff;
+    text-align: center;
+    border-radius: 3px;
+    width: 100%;
+}
+#mess_share img {
+    width: 22px!important;
+    height: 22px!important;
+    vertical-align: top;
+    border: 0;
+}
+
+
+/**********************audio***********************/
+
+
+/******************************¶¯»­*************************/
+#iframe_screen{
+    background:#fff;
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index:300000;
+    overflow:hidden;
+}
+
+
+
+
+</style>
+
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			function random_all(){
+				var myrandom=Math.round(Math.random()*(document.links.length-1))
+				window.location=document.links[myrandom].href
+			}
+		</script>
+
+<div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+                    <img src="guide.png" />
+                </div>
+
+
+<div>
+		<div data-role="page" id="fpage">
+
+		<div data-role="header" data-theme="b" data-position="inline">
+		    <h1>好邻居大测试</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="title">
+				<h1>原来您上辈子是个和尚！福气炸天~</h1>
+			</div>
+
+			<div class="info">
+				<span class="donum">1000+人测试过呦~</span>
+				<span class="pubtime">2014-05</span>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="pic">
+				<img src="5.jpg">
+			</div>
+			<p>
+			前世过着为社会大众牺牲奉献的生活,拥有
+神奇的直觉能力，敢於自我牺牲，但缺乏
+勇气的你，一生都过着如笼中鸟般的生活。
+因此今生会有反抗成规、讨厌被束缚的倾向，
+目标应该是努力过自己想过的生活才对~
+			</p>
+			<h1 class="zhishu">福气指数：95！</h1>
+			<p>福气指数这么高，要不要参加好邻居幸运早餐王活动，
+赢免费早餐，重展光头风采呢？</p>
+<p>发送“我要幸运”到好邻居连锁便利店抢免费的早餐吧~</p>
+                 <p class="fuqi">#有免费早餐的福气，才是真福气#</p>
+
+
+</div>
+                
+<div class="text" id="content">
+                    <div id="mess_share">
+                        <div id="share_1">
+                            <button class="button2" onclick="document.getElementById('mcover').style.display='block';">
+                                <img src="icon_msg.png" width="64" height="64" />
+                                &nbsp;发送给朋友
+                            </button>
+                        </div>
+                        <div id="share_2">
+                            <button class="button2" onclick="document.getElementById('mcover').style.display='block';">
+                                <img src="icon_timeline.png" width="64" height="64" />
+                                &nbsp;·分享到朋友圈
+                            </button>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+
+	<footer>
+	CopyRight 2014 好邻居
+	</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+.clear{
+	clear:both;
+}
+
+.title h1{
+	margin:0;
+	padding:0;
+	font-size:18px;
+}
+
+.info{
+	color:#999;
+	font-size:12px;
+}
+.info .donum{
+	float:left;
+}
+
+.info .pubtime{
+	float:right;
+}
+
+.pic{
+	text-align:center;
+	margin-top:5px;
+	height:auto;
+	overflow:hidden;	
+}
+
+.pic img{
+	width:280px;
+	height:auto;
+}
+.result{
+	margin-top:10px;
+}
+
+.startdiv p{
+	text-indent:2em;
+	color:#666;
+	font-size:14px;
+	line-height:22px;
+	margin:5px 0;
+	padding:0;
+}
+
+.result h2{
+	margin:0;
+	padding:0;
+	font-size:18px;
+	margin-bottom:10px;
+}
+
+.rtitle{
+	font-weight:bold;
+	font-size:18px;
+}
+
+.rcontent{
+	text-indent:2em;
+}
+
+.same{
+	text-align:center;
+	color:#FF9900;
+}
+
+.share hr{
+	border:#CCC 1px dotted;
+}
+
+.wxshare img{
+	width:100%;
+	height:auto;
+}
+
+footer{
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	color:#999;
+	border-top:#DDD 1px solid;
+}
+
+#footer_ad,#result_ad{
+	margin-left:-15px;
+	z-index:999;
+}
+#footer_ad{
+	margin-top:20px;
+}
+
+.gzwx{
+	font-size:14px;
+	text-indent:0em;
+	text-align:center;
+	border:#090 1px dashed;
+	padding:5px;
+	margin-bottom:5px;
+}
+.gzwx span{
+	font-weight:bold;
+	color:#090;
+}
+.gzwx a{color:#F90; font-size:14px; text-decoration:none;}
+

@@ -1,0 +1,187 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+      <title>好邻居大测试</title>
+		<meta name="keywords" content="好邻居" />
+		<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+		<script src="jquery.min.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+		<link rel="stylesheet" href="test.css" />
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			function random_all(){
+				var myrandom=Math.round(Math.random()*(document.links.length-1))
+				window.location=document.links[myrandom].href
+			}
+
+			var dataForWeixin={
+<!-- lang: js -->
+   appId:"",
+<!-- lang: js -->
+   MsgImg:"file:///C:/Users/Lucy/Desktop/haolinju/201401051514304883.jpg",
+<!-- lang: js -->
+   TLImg:"file:///C:/Users/Lucy/Desktop/haolinju/201401051514304883.jpg",
+<!-- lang: js -->
+   url:"file:///C:/Users/Lucy/Desktop/haolinju/index.html",
+<!-- lang: js -->
+   title:"测测你上辈子的福气！",
+<!-- lang: js -->
+   desc:"传说我们现在的一切都是前世所作所为的结果，测测你上辈子的福气吧！",
+<!-- lang: js -->
+   fakeid:"",
+<!-- lang: js -->
+   callback:function(){}
+<!-- lang: js -->
+};
+<!-- lang: js -->
+(function(){
+<!-- lang: js -->
+   var onBridgeReady=function(){
+<!-- lang: js -->
+   WeixinJSBridge.on('menu:share:appmessage', function(argv){
+<!-- lang: js -->
+      WeixinJSBridge.invoke('sendAppMessage',{
+<!-- lang: js -->
+         "appid":dataForWeixin.appId,
+<!-- lang: js -->
+         "img_url":dataForWeixin.MsgImg,
+<!-- lang: js -->
+         "img_width":"120",
+<!-- lang: js -->
+         "img_height":"120",
+<!-- lang: js -->
+         "link":dataForWeixin.url,
+<!-- lang: js -->
+         "desc":dataForWeixin.desc,
+<!-- lang: js -->
+         "title":dataForWeixin.title
+<!-- lang: js -->
+      }, function(res){(dataForWeixin.callback)();});
+<!-- lang: js -->
+   });
+<!-- lang: js -->
+   WeixinJSBridge.on('menu:share:timeline', function(argv){
+<!-- lang: js -->
+      (dataForWeixin.callback)();
+<!-- lang: js -->
+      WeixinJSBridge.invoke('shareTimeline',{
+<!-- lang: js -->
+         "img_url":dataForWeixin.TLImg,
+<!-- lang: js -->
+         "img_width":"120",
+<!-- lang: js -->
+         "img_height":"120",
+<!-- lang: js -->
+         "link":dataForWeixin.url,
+<!-- lang: js -->
+         "desc":dataForWeixin.desc,
+<!-- lang: js -->
+         "title":dataForWeixin.title
+<!-- lang: js -->
+      }, function(res){});
+<!-- lang: js -->
+   });
+<!-- lang: js -->
+   WeixinJSBridge.on('menu:share:weibo', function(argv){
+<!-- lang: js -->
+      WeixinJSBridge.invoke('shareWeibo',{
+<!-- lang: js -->
+         "content":dataForWeixin.title,
+<!-- lang: js -->
+         "url":dataForWeixin.url
+<!-- lang: js -->
+      }, function(res){(dataForWeixin.callback)();});
+<!-- lang: js -->
+   });
+<!-- lang: js -->
+   WeixinJSBridge.on('menu:share:facebook', function(argv){
+<!-- lang: js -->
+      (dataForWeixin.callback)();
+<!-- lang: js -->
+      WeixinJSBridge.invoke('shareFB',{
+<!-- lang: js -->
+         "img_url":dataForWeixin.TLImg,
+<!-- lang: js -->
+         "img_width":"120",
+<!-- lang: js -->
+         "img_height":"120",
+<!-- lang: js -->
+         "link":dataForWeixin.url,
+<!-- lang: js -->
+         "desc":dataForWeixin.desc,
+<!-- lang: js -->
+         "title":dataForWeixin.title
+<!-- lang: js -->
+      }, function(res){});
+<!-- lang: js -->
+   });
+<!-- lang: js -->
+};
+<!-- lang: js -->
+if(document.addEventListener){
+<!-- lang: js -->
+   document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+<!-- lang: js -->
+}else if(document.attachEvent){
+<!-- lang: js -->
+   document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+<!-- lang: js -->
+   document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+<!-- lang: js -->
+}
+<!-- lang: js -->
+})();
+
+		</script>
+
+		<div data-role="page" id="fpage">
+
+		<div data-role="header" data-theme="b" data-position="inline">
+		    <h1>好邻居大测试</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="title">
+				<h1>测测你上辈子的福气！</h1>
+			</div>
+
+			<div class="info">
+				<span class="donum">1000+人测试过呦~</span>
+				<span class="pubtime">2014-05</span>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="pic">
+				<img src="201401051514304883.jpg">
+			</div>
+			<p>
+			你会不会怀疑自己上辈子欠了某人一吊钱，</br>
+所以这辈子TA才会来讨债？</br>
+你会不会怀疑是上辈子过得太如意了，</br>
+所以这辈子才不尽如意？</br>
+别猜测了！!</br>
+现在就来看看你前世福气如何吧~~…</br>
+			</p>
+
+	    	<input type="button" onClick="random_all()" value="开始测试吧！">
+
+	<footer>
+	CopyRight 2014 好邻居
+	</footer>
+
+	<a href="1.html"></a>
+	<a href="2.html"></a>
+   <a href="3.html"></a>
+   <a href="4.html"></a>
+   <a href="5.html"></a>
+
+</div>
+</body>
+</html>
